@@ -165,16 +165,6 @@ export const FooterSection = (): JSX.Element => {
                 </Card>
               ))}
 
-              {/* Additional contact methods */}
-              <Card className="bg-gradient-to-r from-[#1a3770] to-[#2a4a8a] border-none rounded-xl overflow-hidden">
-                <CardContent className="p-6 text-center">
-                  <Mail className="w-8 h-8 text-[#11b36f] mx-auto mb-3" />
-                  <h4 className="font-semibold text-white text-lg mb-2">Prefer to write?</h4>
-                  <p className="text-white/80 text-sm">
-                    You can also send us an email and we'll respond soon
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>

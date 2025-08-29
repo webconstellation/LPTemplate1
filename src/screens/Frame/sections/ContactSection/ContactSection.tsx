@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { CheckCircle, Users, Globe, FileText, Shield, Clock } from "lucide-react";
 
-export const FaqSection = (): JSX.Element => {
+export const ContactSection = (): JSX.Element => {
   // Service descriptions data
   const serviceDescriptions = [
     "Our office provides answers to immigrants' questions and helps them with their immigration procedures, such as work permits or permanent residence applications.",

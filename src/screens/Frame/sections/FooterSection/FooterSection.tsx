@@ -44,22 +44,19 @@ export const FooterSection = (): JSX.Element => {
                   Request Your Free Consultation
                 </h3>
                 <form 
-                  name="contact" 
-                  method="POST" 
-                  action="/thank-you"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
+                  action="https://formspree.io/f/YOUR_FORM_ID"
+                  method="POST"
+                  onSubmit={() => {
+                    // WhatConverts tracking
+                    if (typeof window !== 'undefined' && window.wc_lead) {
+                      window.wc_lead();
+                    }
+                  }}
                   className="space-y-4"
                 >
-                  {/* Hidden field for Netlify */}
-                  <input type="hidden" name="form-name" value="contact" />
-                  
-                  {/* Honeypot field for spam protection */}
-                  <p style={{ display: 'none' }}>
-                    <label>
-                      Don't fill this out if you're human: <input name="bot-field" />
-                    </label>
-                  </p>
+                  {/* Hidden field for form identification */}
+                  <input type="hidden" name="_subject" value="New Immigration Consultation Request" />
+                  <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
                   
                   <div>
                     <label htmlFor="fullName" className="block text-white/90 text-sm font-medium mb-2">

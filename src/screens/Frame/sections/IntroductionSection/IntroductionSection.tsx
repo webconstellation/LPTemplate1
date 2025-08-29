@@ -7,23 +7,23 @@ export const IntroductionSection = (): JSX.Element => {
   const serviceCards = [
     {
       icon: Users,
-      title: "CIUDADANÍA ESTADOUNIDENSE",
-      content: `Cuando los residentes permanentes legales desean convertirse en ciudadanos estadounidenses, KC Immigration Lawyers puede ayudar. Ofrecemos una variedad de servicios legales para ayudar a los no ciudadanos a entender el proceso migratorio y prepararse para la naturalización. Brindamos información, asesoría y representación para que los residentes permanentes puedan obtener la ciudadanía rápidamente.`,
+      title: "U.S. CITIZENSHIP",
+      content: `When legal permanent residents wish to become U.S. citizens, Constellation Law can help. We offer a variety of legal services to help non-citizens understand the immigration process and prepare for naturalization. We provide information, guidance, and representation so permanent residents can obtain citizenship quickly.`,
     },
     {
       icon: FileCheck,
-      title: "TARJETAS VERDES",
-      content: `Obtener una tarjeta verde también se conoce como residencia permanente. Completar el proceso de residencia permanente es un paso clave en el camino migratorio. Con este estatus, el titular de la tarjeta verde puede vivir y trabajar en cualquier parte de los EE. UU. y, por lo general, será elegible para solicitar la ciudadanía estadounidense en unos pocos años.`,
+      title: "GREEN CARDS",
+      content: `Obtaining a green card is also known as permanent residence. Completing the permanent residence process is a key step in the immigration journey. With this status, the green card holder can live and work anywhere in the U.S. and will generally be eligible to apply for U.S. citizenship in a few years.`,
     },
     {
       icon: Heart,
-      title: "VISAS DE PROMETIDO/A - K-1",
-      content: `Las visas de prometido/a (o visas K-1) son un tipo de visa dentro de la categoría de inmigración basada en la familia. Estas visas permiten que un ciudadano extranjero entre a los Estados Unidos por 90 días para conocer a la familia de su pareja y casarse. Dado que es una visa muy específica, contar con la ayuda de un abogado de inmigración altamente experimentado es clave para garantizar que toda la documentación se complete y presente correctamente.`,
+      title: "FIANCÉ VISAS - K-1",
+      content: `Fiancé visas (or K-1 visas) are a type of visa within the family-based immigration category. These visas allow a foreign citizen to enter the United States for 90 days to meet their partner's family and get married. Since it's a very specific visa, having the help of a highly experienced immigration attorney is key to ensuring all documentation is completed and submitted correctly.`,
     },
     {
       icon: Home,
-      title: "INMIGRACIÓN FAMILIAR",
-      content: `La inmigración basada en la familia, en la que un familiar vive en los Estados Unidos y te patrocina para obtener una tarjeta verde, es uno de los caminos más comunes hacia la residencia en EE. UU. KC Immigration Lawyers puede ayudarte con las solicitudes, representación y mucho más.`,
+      title: "FAMILY IMMIGRATION",
+      content: `Family-based immigration, where a family member living in the United States sponsors you for a green card, is one of the most common paths to U.S. residence. Constellation Law can help you with applications, representation, and much more.`,
     },
   ];
 
@@ -33,17 +33,17 @@ export const IntroductionSection = (): JSX.Element => {
         {/* Header with green border */}
         <div className="pb-4 md:pb-6 mb-6 md:mb-8 border-b-[3px] border-[#11b36f] relative">
           <h2 className="font-['Oswald',Helvetica] font-bold text-[#1a3770] text-2xl sm:text-3xl md:text-4xl text-center leading-tight mb-4">
-            Abogados de inmigración atentos, compasivos y capacitados en Kansas City
+            Attentive, Compassionate, and Skilled Immigration Attorneys
           </h2>
           <p className="font-['Poppins',Helvetica] font-medium text-black text-sm sm:text-base md:text-lg text-center leading-relaxed">
-            KC Immigration Lawyers atiende al área metropolitana de Kansas City, así como a clientes de inmigración en todo Estados Unidos y alrededor del
+            Constellation Law serves clients nationwide and around the
             <br className="hidden lg:block" />
-            mundo. Brindamos asistencia completa y experta en muchas áreas del derecho de inmigración, incluyendo las siguientes:
+            world. We provide comprehensive and expert assistance in many areas of immigration law, including the following:
           </p>
         </div>
 
         <h3 className="font-['Oswald',Helvetica] font-bold text-[#1a3770] text-2xl md:text-3xl text-center mb-8">
-          Nuestros Servicios de Inmigración
+          Our Immigration Services
         </h3>
 
         {/* Service cards grid */}

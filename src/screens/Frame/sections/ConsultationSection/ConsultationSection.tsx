@@ -60,7 +60,7 @@ export const ConsultationSection = (): JSX.Element => {
                 <div className="relative w-full h-[280px]">
                   <img 
                     src="https://images.pexels.com/photos/5668885/pexels-photo-5668885.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" 
-                    alt="Attorney Bill Niffen" 
+                    alt="Attorney John Smith" 
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a3770]/40 via-transparent to-transparent"></div>

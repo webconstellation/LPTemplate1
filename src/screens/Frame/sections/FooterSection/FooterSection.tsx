@@ -28,11 +28,11 @@ export const FooterSection = (): JSX.Element => {
           {/* Header section integrated into main content */}
           <div className="text-center mb-12 md:mb-16">
             <h2 className="font-['Oswald',Helvetica] font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center tracking-[0] leading-tight md:leading-[66px] mb-4">
-              CONTACT US NOW
+              CONTACT EXPERIENCED FEDERAL & STATE CRIMINAL DEFENSE ATTORNEYS TODAY
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#11b36f] to-[#0ea062] mx-auto mb-6"></div>
             <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-              Ready to start your immigration process? Contact us for expert and personalized legal advice.
+              Ready to defend your rights? Contact us for expert criminal defense representation.
             </p>
           </div>
 
@@ -41,7 +41,7 @@ export const FooterSection = (): JSX.Element => {
             <Card id="contact-form" className="bg-white/10 backdrop-blur-sm border-white/20 rounded-2xl overflow-hidden">
               <CardContent className="p-6 md:p-8">
                 <h3 className="font-['Oswald',Helvetica] font-bold text-white text-2xl md:text-3xl mb-6 text-center">
-                  Request Your Free Consultation
+                  Get Your Free Case Evaluation
                 </h3>
                 <form 
                   action="https://formspree.io/f/YOUR_FORM_ID"
@@ -55,20 +55,33 @@ export const FooterSection = (): JSX.Element => {
                   className="space-y-4"
                 >
                   {/* Hidden field for form identification */}
-                  <input type="hidden" name="_subject" value="New Immigration Consultation Request" />
+                  <input type="hidden" name="_subject" value="New Criminal Defense Consultation Request" />
                   <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
                   
                   <div>
-                    <label htmlFor="fullName" className="block text-white/90 text-sm font-medium mb-2">
-                      Full Name *
+                    <label htmlFor="firstName" className="block text-white/90 text-sm font-medium mb-2">
+                      First Name *
                     </label>
                     <input
                       type="text"
-                      id="fullName"
-                      name="fullName"
+                      id="firstName"
+                      name="firstName"
                       required
                       className="w-full px-4 py-3 bg-white/90 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#11b36f] focus:border-transparent outline-none transition-all duration-200"
-                      placeholder="Your full name"
+                      placeholder="Your first name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-white/90 text-sm font-medium mb-2">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      className="w-full px-4 py-3 bg-white/90 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#11b36f] focus:border-transparent outline-none transition-all duration-200"
+                      placeholder="Your last name"
                     />
                   </div>
                   <div>
@@ -99,7 +112,7 @@ export const FooterSection = (): JSX.Element => {
                   </div>
                   <div>
                     <label htmlFor="caseSummary" className="block text-white/90 text-sm font-medium mb-2">
-                      Brief Summary of Your Case *
+                      Case Summary *
                     </label>
                     <textarea
                       id="caseSummary"
@@ -107,7 +120,7 @@ export const FooterSection = (): JSX.Element => {
                       required
                       rows={4}
                       className="w-full px-4 py-3 bg-white/90 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#11b36f] focus:border-transparent outline-none transition-all duration-200 resize-vertical"
-                      placeholder="Briefly describe your immigration situation and how we can help you..."
+                      placeholder="Briefly describe your legal situation and how we can help you..."
                     ></textarea>
                   </div>
                   <Button 
@@ -115,7 +128,7 @@ export const FooterSection = (): JSX.Element => {
                     className="w-full bg-gradient-to-r from-[#11b36f] to-[#0ea062] hover:from-[#0ea062] hover:to-[#11b36f] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <Send className="w-5 h-5 mr-2" />
-                    Send Request
+                    Get Free Consultation
                   </Button>
                 </form>
               </CardContent>
@@ -125,45 +138,56 @@ export const FooterSection = (): JSX.Element => {
             <div className="space-y-6">
               <div className="text-center lg:text-left mb-8">
                 <h3 className="font-['Oswald',Helvetica] font-bold text-white text-2xl md:text-3xl mb-4">
-                  Contact Information
+                  Get In Touch
                 </h3>
                 <p className="text-white/80 text-lg">
-                  We're here to help you with your immigration process
+                  We're here to defend your rights and protect your future
                 </p>
               </div>
 
-              {contactInfo.map((info, index) => (
-                <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 rounded-xl overflow-hidden hover:bg-white/15 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-[#11b36f] to-[#0ea062] rounded-lg flex items-center justify-center flex-shrink-0">
-                        {index === 0 ? (
-                          <Phone className="w-6 h-6 text-white" />
-                        ) : (
-                          <MapPin className="w-6 h-6 text-white" />
-                        )}
-                      </div>
-                      <div>
-                        <h4 className="font-['Oswald',Helvetica] font-medium text-white text-xl mb-2">
-                          {info.title}
-                        </h4>
-                        <p className="font-['Poppins',Helvetica] font-light text-white/90 text-lg leading-relaxed whitespace-pre-line">
-                          {info.details}
-                        </p>
-                        {index === 0 && (
-                          <a
-                            href="tel:5551234567"
-                            className="inline-flex items-center mt-3 text-[#11b36f] hover:text-[#0ea062] transition-colors duration-200"
-                          >
-                            <Phone className="w-4 h-4 mr-2" />
-                            Call Now
-                          </a>
-                        )}
-                      </div>
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-xl overflow-hidden hover:bg-white/15 transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#11b36f] to-[#0ea062] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-white" />
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
+                    <div>
+                      <h4 className="font-['Oswald',Helvetica] font-medium text-white text-xl mb-2">
+                        Free Consultation
+                      </h4>
+                      <p className="font-['Poppins',Helvetica] font-light text-white/90 text-lg leading-relaxed">
+                        (678) 280-7389
+                      </p>
+                      <a
+                        href="tel:6782807389"
+                        className="inline-flex items-center mt-3 text-[#11b36f] hover:text-[#0ea062] transition-colors duration-200"
+                      >
+                        <Phone className="w-4 h-4 mr-2" />
+                        Call Now
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-xl overflow-hidden hover:bg-white/15 transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#11b36f] to-[#0ea062] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-['Oswald',Helvetica] font-medium text-white text-xl mb-2">
+                        Office Location
+                      </h4>
+                      <p className="font-['Poppins',Helvetica] font-light text-white/90 text-lg leading-relaxed">
+                        521 Fifth Avenue, 17th Floor<br />
+                        New York, NY 10175
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
             </div>
           </div>
@@ -172,7 +196,7 @@ export const FooterSection = (): JSX.Element => {
         {/* Copyright */}
         <div className="border-t border-white/10 py-4 text-center">
           <p className="text-white/60 text-sm">
-            © 2025 Constellation Law. All rights reserved. | Professional Legal Services
+            © 2025 Dressie Law Firm. All rights reserved. | Criminal Defense Legal Services
           </p>
         </div>
       </div>

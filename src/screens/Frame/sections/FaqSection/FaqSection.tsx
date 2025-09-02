@@ -1,59 +1,28 @@
 import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
-import { CheckCircle, Users, Globe, FileText, Shield, Clock } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 export const FaqSection = (): JSX.Element => {
-  // Service descriptions data
-  const serviceDescriptions = [
-    "Our office provides answers to immigrants' questions and helps them with their immigration procedures, such as work permits or permanent residence applications.",
-    "With Constellation Law, you can have peace of mind receiving honest legal advice, defense, and representation in North Kansas City, throughout the Kansas City metropolitan area, anywhere in the United States, or around the world.",
-    "We have extensive experience in various immigration matters such as green card applications, work permits, family visas, marriage visas, fiancé visas, and more.",
-    "We also offer assistance with the U.S. citizenship and naturalization process. If you have questions about how to become a U.S. citizen or have a family member who needs help with their visa application, contact Constellation Law immediately for qualified legal representation.",
-  ];
-
-  const clientCategories = [
+  const testimonials = [
     {
-      icon: Users,
-      title: "U.S. Citizens",
-      description: "who wish to sponsor a spouse, child, parent, or sibling for a green card."
+      text: "I'm alleged with a false sexual criminal charge by my wife and took up the uphill task of finding an appropriate attorney. Spent almost two months with this exercise but was always confused who to hire or not. But now I'm feeling extremely satisfied and secure by having a couple of consultations with Elena Fast, who comprehended the case fastly just as her last name suggests and which impressed me the most was her vision and strategy which includes out of box solutions also. No attorney ( with utmost respect to the community) despite their lengthy profiles and impressive ratings was able to address my specific and somewhat unique concerns and needs despite my tiring efforts to explain except for Miss Elena Fast. I would suggest all readers to reach Miss Fast as Fastly as possible without wasting their time and money around if they're genuinely looking for a workable strategy and informed expectations of the best disposition of their case. I have made the best possible decision already and would suggest everyone else the same.",
+      rating: 5
     },
     {
-      icon: Globe,
-      title: "U.S. Citizens", 
-      description: "who wish to bring their fiancés to the U.S."
+      text: "I've consulted with Elena on a matter that worried me for a while. She was extremely respectful, listened very attentively, and answered all of my questions. I would never hesitate to hire her as my attorney",
+      rating: 5
     },
     {
-      icon: FileText,
-      title: "Non-citizens",
-      description: "seeking to obtain visas."
+      text: "Elena is extremely knowledgeable about all aspects of criminal law. She is a tremendous listener and has the ability to break things down in a manner that is very understandable. I literally could not give a higher rating for both a lawyer and a person. Feel extremely lucky to have crossed paths.",
+      rating: 5
     },
     {
-      icon: Shield,
-      title: "Individuals in the process",
-      description: "of obtaining permanent residence or U.S. citizenship."
-    }
-  ];
-
-  const serviceHighlights = [
-    {
-      icon: CheckCircle,
-      text: "Answers to immigrant questions"
+      text: "Elena is brilliant, talented, extremely professional, experienced and compassionate. She was able in a very short time to understand my situation and give me all the information and advise I needed. I felt so much released and empowered after I spoke with her. I felt I was in the best possible hands. I'm very grateful I found her!",
+      rating: 5
     },
     {
-      icon: CheckCircle, 
-      text: "Work permits"
-    },
-    {
-      icon: CheckCircle,
-      text: "Permanent residence applications"
-    },
-    {
-      icon: CheckCircle,
-      text: "Family and marriage visas"
-    },
-    {
-      icon: CheckCircle,
-      text: "Citizenship and naturalization process"
+      text: "Elena was extremely knowledgeable, heard out my story, gave me clear direction on where I stood in the eyes of the law & what the best next steps were to take in order to have my case resolved. Moreover, she was human and offered compassion & sympathy, going above and beyond what was required of her. Cannot recommend or speak highly enough of our interactions.",
+      rating: 5
     }
   ];
 
@@ -62,65 +31,59 @@ export const FaqSection = (): JSX.Element => {
       <div className="container mx-auto max-w-[1130px] px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="font-bold text-[#1a3770] text-3xl sm:text-4xl md:text-[46px] leading-tight md:leading-[50.6px] [font-family:'Oswald',Helvetica] tracking-[0] mb-4">
-            WORKING WITH CONSTELLATION LAW
+            CLIENT TESTIMONIALS
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#11b36f] to-[#0ea062] mx-auto mb-6"></div>
           <p className="[font-family:'Poppins',Helvetica] font-medium text-[#1a3770] text-base md:text-lg max-w-3xl mx-auto">
-            Our firm offers a wide range of immigration-related legal services for different categories of clients, including:
+            See what our clients have to say about our criminal defense services:
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Left Column - Content */}
-          <div className="space-y-6">
-            {/* Client categories grid */}
-            <div className="grid grid-cols-1 gap-4">
-              {clientCategories.map((category, index) => (
-                <div key={index} className="bg-white rounded-xl p-5 shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-[#11b36f] to-[#0ea062] rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <category.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-[#1a3770] text-sm mb-2">{category.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{category.description}</p>
-                    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="bg-white rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Quote className="w-8 h-8 text-[#11b36f] mr-3" />
+                  <div className="flex">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
-
-            {/* Service highlights */}
-            <div className="bg-gradient-to-br from-[#1a3770] to-[#2a4a8a] rounded-2xl p-6 text-white">
-              <h3 className="font-bold text-xl mb-4">Our Services Include:</h3>
-              <div className="grid grid-cols-1 gap-3">
-                {serviceHighlights.map((highlight, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <highlight.icon className="w-5 h-5 text-[#11b36f] flex-shrink-0" />
-                    <span className="text-sm">{highlight.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+                <p className="text-gray-700 text-sm leading-relaxed italic">
+                  "{testimonial.text}"
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+        
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-[#11b36f] to-[#0ea062] rounded-2xl p-8 text-white">
+            <h3 className="font-['Oswald',Helvetica] font-bold text-2xl md:text-3xl mb-4">
+              Ready to Get Started?
+            </h3>
+            <p className="text-lg mb-6">
+              Contact us today for a confidential consultation about your case.
+            </p>
+            <button 
+              onClick={() => {
+                const contactForm = document.getElementById('contact-form');
+                if (contactForm) {
+                  contactForm.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="bg-white text-[#11b36f] font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+            >
+              SCHEDULE NOW
+            </button>
           </div>
-
-          {/* Right Column - Image */}
-          <div className="flex items-center">
-            <Card className="w-full border-0 rounded-2xl overflow-hidden shadow-lg">
-              <CardContent className="p-0">
-                <div className="relative w-full h-[350px]">
-                  <img 
-                    src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" 
-                    alt="Immigration law consultation and document review" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a3770]/40 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                      <p className="text-[#1a3770] font-semibold">Professional Consultation</p>
-                      <p className="text-gray-600 text-sm">Specialized legal advice</p>
-                    </div>
-                  </div>
+        </div>
+      </div>
+    </section>
+  );
+};
                 </div>
               </CardContent>
             </Card>

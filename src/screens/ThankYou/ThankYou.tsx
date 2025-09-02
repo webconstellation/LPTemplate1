@@ -2,24 +2,24 @@ import React from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { CheckCircle, Phone, Mail, MapPin, ArrowLeft } from "lucide-react";
-
-export const ThankYou = (): JSX.Element => {
+                src="/dressie-law-logo.png"
+                alt="Dressie Law Firm"
   const handleBackToHome = () => {
     window.location.href = '/';
   };
 
   const handleCallNow = () => {
     window.location.href = 'tel:5551234567';
-  };
+              <span className="font-bold text-[#1a3770] text-lg md:text-xl">Dressie Law Firm</span>
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1a3770] via-[#2a4a8a] to-[#1a3770] relative overflow-hidden">
-      {/* Background Image */}
+            href="tel:6782807389"
       <div className="absolute inset-0">
         <img 
           src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
           alt="Immigration law office" 
-          className="w-full h-full object-cover opacity-20"
+            <span>(678) 280-7389</span>
         />
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a3770]/80 via-[#2a4a8a]/80 to-[#1a3770]/80"></div>
       </div>
@@ -67,12 +67,12 @@ export const ThankYou = (): JSX.Element => {
 
             {/* Main Heading */}
             <h1 className="font-['Oswald',Helvetica] font-bold text-white text-4xl sm:text-5xl md:text-6xl leading-tight mb-6">
-              THANK YOU FOR CONTACTING US!
+              THANK YOU FOR YOUR CONSULTATION REQUEST!
             </h1>
 
             {/* Subheading */}
             <p className="font-['Poppins',Helvetica] font-light text-white/90 text-xl md:text-2xl leading-relaxed mb-8 max-w-3xl mx-auto">
-              We have received your consultation request and will contact you soon.
+              We have received your criminal defense consultation request and will contact you soon.
             </p>
           </div>
 
@@ -82,12 +82,12 @@ export const ThankYou = (): JSX.Element => {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-2xl overflow-hidden">
               <CardContent className="p-8 text-center">
                 <h2 className="font-['Oswald',Helvetica] font-bold text-white text-2xl mb-4">
-                  Next Steps
+                  What Happens Next
                 </h2>
                 <div className="space-y-3 text-white/90">
                   <p className="flex items-center justify-center gap-2">
                     <span className="w-2 h-2 bg-[#11b36f] rounded-full"></span>
-                    We will review your case in detail
+                    We will review your criminal case in detail
                   </p>
                   <p className="flex items-center justify-center gap-2">
                     <span className="w-2 h-2 bg-[#11b36f] rounded-full"></span>
@@ -95,7 +95,7 @@ export const ThankYou = (): JSX.Element => {
                   </p>
                   <p className="flex items-center justify-center gap-2">
                     <span className="w-2 h-2 bg-[#11b36f] rounded-full"></span>
-                    We will schedule your free consultation
+                    We will schedule your free criminal defense consultation
                   </p>
                 </div>
               </CardContent>
@@ -105,16 +105,16 @@ export const ThankYou = (): JSX.Element => {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-2xl overflow-hidden">
               <CardContent className="p-8 text-center">
                 <h2 className="font-['Oswald',Helvetica] font-bold text-white text-2xl mb-4">
-                  Need Immediate Help?
+                  Urgent Legal Matter?
                 </h2>
                 <div className="space-y-4">
                   <div className="flex items-center justify-center gap-3 text-white/90">
                     <Phone className="w-5 h-5 text-[#11b36f]" />
-                    <span>(555) 123-4567</span>
+                    <span>(678) 280-7389</span>
                   </div>
                   <div className="flex items-center justify-center gap-3 text-white/90">
                     <MapPin className="w-5 h-5 text-[#11b36f]" />
-                    <span className="text-sm">123 Main Street<br />Anytown, State 12345</span>
+                    <span className="text-sm">521 Fifth Avenue, 17th Floor<br />New York, NY 10175</span>
                   </div>
                 </div>
               </CardContent>
@@ -124,7 +124,7 @@ export const ThankYou = (): JSX.Element => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
-              onClick={handleCallNow}
+              onClick={() => window.location.href = 'tel:6782807389'}
               className="w-full sm:w-auto min-w-[280px] h-[50px] bg-gradient-to-r from-[#11b36f] to-[#0ea062] hover:from-[#0ea062] hover:to-[#11b36f] rounded-xl border-none font-['Oswald',Helvetica] font-medium text-white text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -147,7 +147,7 @@ export const ThankYou = (): JSX.Element => {
       <footer className="relative z-10 border-t border-white/10 py-6">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-white/60 text-sm">
-            © 2025 Constellation Law. All rights reserved. | Professional Legal Services
+            © 2025 Dressie Law Firm. All rights reserved. | Criminal Defense Legal Services
           </p>
         </div>
       </footer>

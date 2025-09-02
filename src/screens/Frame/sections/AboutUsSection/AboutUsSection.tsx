@@ -1,12 +1,24 @@
 import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
+import { Award, Shield, Users, CheckCircle } from "lucide-react";
 
 export const AboutUsSection = (): JSX.Element => {
-  const paragraphs = [
-    "At Constellation Law, we offer a variety of services focused on assisting our clients with U.S. immigration law. Primarily, we help people obtain their green cards (permanent residence), U.S. citizenship, or come to the United States through visas such as the K-1 fiancé visa. U.S. visas are necessary for anyone wishing to enter the country.",
-    "From gathering information and documents to completing forms and preparing you for your interview, working with us can make the process easier.",
-    "No matter what type of visa or method you choose to come to the U.S., the immigration process involves several steps before obtaining citizenship or even being approved for a visa. It can be complicated and anxiety-inducing.",
-    "We are committed to ensuring you understand the process and know what to expect. We are with you every step of the way to answer your questions, set expectations, and help you chart the best path forward.",
+  const whyChoosePoints = [
+    {
+      icon: Shield,
+      title: "Proven Trial Experience",
+      description: "With several courtroom victories, we know how to build a strong defense."
+    },
+    {
+      icon: Award,
+      title: "Former Prosecutors & Law Enforcement",
+      description: "Our team understands both sides of the legal system, giving you an edge."
+    },
+    {
+      icon: Users,
+      title: "Individualized Attention",
+      description: "Your case is unique, and we treat it that way. We craft strategies tailored to your situation."
+    }
   ];
 
   return (
@@ -23,20 +35,58 @@ export const AboutUsSection = (): JSX.Element => {
 
       <div className="max-w-[1130px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center leading-tight md:leading-[66px] [font-family:'Oswald',Helvetica] tracking-[0] mb-6 md:mb-8">
-          PROFESSIONAL AND PERSONALIZED HELP FOR
-          <br className="hidden md:block" />
-          YOUR IMMIGRATION AND CITIZENSHIP CASE
+          WHY CHOOSE US?
         </h2>
 
-        <div className="space-y-4 md:space-y-8">
-            {paragraphs.map((paragraph, index) => (
-              <p
-                key={`paragraph-${index}`}
-                className="[text-shadow:0px_0px_6px_#00000066] [font-family:'Montserrat',Helvetica] font-medium text-white text-base md:text-lg lg:text-xl text-center tracking-[0] leading-relaxed"
-              >
-                {paragraph}
-              </p>
-            ))}
+        <p className="[text-shadow:0px_0px_6px_#00000066] [font-family:'Montserrat',Helvetica] font-medium text-white text-base md:text-lg lg:text-xl text-center tracking-[0] leading-relaxed mb-8">
+          When facing criminal charges, you need a legal team with the experience and dedication to fight for you. Here's why we stand out:
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {whyChoosePoints.map((point, index) => (
+            <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 rounded-xl overflow-hidden">
+              <CardContent className="p-6 text-center">
+                <div className="mb-4 flex justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#11b36f] to-[#0ea062] rounded-full flex items-center justify-center">
+                    <point.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="font-['Oswald',Helvetica] font-bold text-white text-xl mb-4">
+                  {point.title}
+                </h3>
+                <p className="text-white/90 text-sm leading-relaxed">
+                  {point.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-8">
+          <p className="[text-shadow:0px_0px_6px_#00000066] [font-family:'Montserrat',Helvetica] font-medium text-white text-base md:text-lg text-center tracking-[0] leading-relaxed">
+            Even if your case does not make the front page of the paper, you deserve to feel like you are our most important client. Your case is the most important case to you, and therefore it is the most important case to us. Please contact us today to find out if we are a good fit.
+          </p>
+        </div>
+
+        {/* Badges & Awards Section */}
+        <div className="text-center mb-8">
+          <h3 className="font-['Oswald',Helvetica] font-bold text-white text-2xl mb-6">
+            Awards & Recognition
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+              <Award className="w-12 h-12 text-[#11b36f] mx-auto mb-2" />
+              <p className="text-white text-sm">Professional Excellence</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+              <Shield className="w-12 h-12 text-[#11b36f] mx-auto mb-2" />
+              <p className="text-white text-sm">Client Protection</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+              <CheckCircle className="w-12 h-12 text-[#11b36f] mx-auto mb-2" />
+              <p className="text-white text-sm">Proven Results</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

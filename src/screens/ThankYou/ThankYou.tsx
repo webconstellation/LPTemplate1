@@ -9,7 +9,7 @@ export const ThankYou = (): JSX.Element => {
   };
 
   const handleCallNow = () => {
-    window.location.href = 'tel:8162074496';
+    window.location.href = 'tel:5551234567';
   };
 
   return (
@@ -31,24 +31,24 @@ export const ThankYou = (): JSX.Element => {
             <div className="flex-shrink-0">
               <div className="h-7 md:h-10 flex items-center">
                 <img
-                  src="/KC-Immigration-Lawyers-Logo.png"
-                  alt="KC Immigration Lawyers"
+                  src="/constellation-law-logo.png"
+                  alt="Constellation Law"
                   className="h-full w-auto"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.nextElementSibling.style.display = 'block';
                   }}
                 />
-                <span className="hidden font-bold text-[#1a3770] text-lg md:text-xl">KC Immigration</span>
+                <span className="hidden font-bold text-[#1a3770] text-lg md:text-xl">Constellation Law</span>
               </div>
             </div>
             <a
-              href="tel:8162074496"
+              href="tel:5551234567"
               className="inline-flex items-center px-4 py-2 md:px-6 md:py-3 bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
             >
               <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              <span className="hidden sm:inline">Llamar: </span>
-              <span>(816) 207-4496</span>
+              <span className="hidden sm:inline">Call: </span>
+              <span>(555) 123-4567</span>
             </a>
           </div>
         </div>
@@ -110,11 +110,11 @@ export const ThankYou = (): JSX.Element => {
                 <div className="space-y-4">
                   <div className="flex items-center justify-center gap-3 text-white/90">
                     <Phone className="w-5 h-5 text-[#11b36f]" />
-                    <span>(816) 207-4496</span>
+                    <span>(555) 123-4567</span>
                   </div>
                   <div className="flex items-center justify-center gap-3 text-white/90">
                     <MapPin className="w-5 h-5 text-[#11b36f]" />
-                    <span className="text-sm">1901 Swift Avenue North<br />Kansas City, Missouri 64116</span>
+                    <span className="text-sm">123 Main Street<br />Anytown, State 12345</span>
                   </div>
                 </div>
               </CardContent>
@@ -147,7 +147,7 @@ export const ThankYou = (): JSX.Element => {
       <footer className="relative z-10 border-t border-white/10 py-6">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-white/60 text-sm">
-            © 2025 KC Immigration Lawyers. All rights reserved. | Professional Legal Services
+            © 2025 Constellation Law. All rights reserved. | Professional Legal Services
           </p>
         </div>
       </footer>

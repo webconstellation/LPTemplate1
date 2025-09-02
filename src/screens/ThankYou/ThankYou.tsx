@@ -152,3 +152,5 @@ export const ThankYou = (): JSX.Element => {
   );
 };
 }
+  )
+}

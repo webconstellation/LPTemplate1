@@ -151,7 +151,6 @@ export const ThankYou = (): JSX.Element => {
       </footer>
   );
 };
-  )
 }
   )
 }

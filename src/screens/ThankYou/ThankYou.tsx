@@ -67,12 +67,12 @@ export const ThankYou = (): JSX.Element => {
 
             {/* Main Heading */}
             <h1 className="font-['Oswald',Helvetica] font-bold text-white text-4xl sm:text-5xl md:text-6xl leading-tight mb-6">
-              ¡GRACIAS POR CONTACTARNOS!
+              THANK YOU FOR CONTACTING US!
             </h1>
 
             {/* Subheading */}
             <p className="font-['Poppins',Helvetica] font-light text-white/90 text-xl md:text-2xl leading-relaxed mb-8 max-w-3xl mx-auto">
-              Hemos recibido tu solicitud de consulta y nos pondremos en contacto contigo pronto.
+              We have received your consultation request and will contact you soon.
             </p>
           </div>
 
@@ -82,20 +82,20 @@ export const ThankYou = (): JSX.Element => {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-2xl overflow-hidden">
               <CardContent className="p-8 text-center">
                 <h2 className="font-['Oswald',Helvetica] font-bold text-white text-2xl mb-4">
-                  Próximos Pasos
+                  Next Steps
                 </h2>
                 <div className="space-y-3 text-white/90">
                   <p className="flex items-center justify-center gap-2">
                     <span className="w-2 h-2 bg-[#11b36f] rounded-full"></span>
-                    Revisaremos tu caso en detalle
+                    We will review your case in detail
                   </p>
                   <p className="flex items-center justify-center gap-2">
                     <span className="w-2 h-2 bg-[#11b36f] rounded-full"></span>
-                    Te contactaremos dentro de 24 horas
+                    We will contact you within 24 hours
                   </p>
                   <p className="flex items-center justify-center gap-2">
                     <span className="w-2 h-2 bg-[#11b36f] rounded-full"></span>
-                    Programaremos tu consulta gratuita
+                    We will schedule your free consultation
                   </p>
                 </div>
               </CardContent>
@@ -105,7 +105,7 @@ export const ThankYou = (): JSX.Element => {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-2xl overflow-hidden">
               <CardContent className="p-8 text-center">
                 <h2 className="font-['Oswald',Helvetica] font-bold text-white text-2xl mb-4">
-                  ¿Necesitas Ayuda Inmediata?
+                  Need Immediate Help?
                 </h2>
                 <div className="space-y-4">
                   <div className="flex items-center justify-center gap-3 text-white/90">
@@ -128,7 +128,7 @@ export const ThankYou = (): JSX.Element => {
               className="w-full sm:w-auto min-w-[280px] h-[50px] bg-gradient-to-r from-[#11b36f] to-[#0ea062] hover:from-[#0ea062] hover:to-[#11b36f] rounded-xl border-none font-['Oswald',Helvetica] font-medium text-white text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               <Phone className="w-5 h-5 mr-2" />
-              LLAMAR AHORA
+              CALL NOW
             </Button>
             
             <Button 
@@ -137,7 +137,7 @@ export const ThankYou = (): JSX.Element => {
               className="w-full sm:w-auto min-w-[280px] h-[50px] bg-white/10 backdrop-blur-sm border-white/30 hover:bg-white/20 rounded-xl font-['Oswald',Helvetica] font-medium text-white text-lg transition-all duration-300"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
-              VOLVER AL INICIO
+              BACK TO HOME
             </Button>
           </div>
         </div>
@@ -147,7 +147,7 @@ export const ThankYou = (): JSX.Element => {
       <footer className="relative z-10 border-t border-white/10 py-6">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-white/60 text-sm">
-            © 2025 KC Immigration Lawyers. Todos los derechos reservados. | Servicios Legales Profesionales
+            © 2025 KC Immigration Lawyers. All rights reserved. | Professional Legal Services
           </p>
         </div>
       </footer>

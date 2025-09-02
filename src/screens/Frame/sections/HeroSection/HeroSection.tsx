@@ -49,24 +49,24 @@ export const HeroSection = (): JSX.Element => {
         <div className="max-w-[1130px] py-16 md:py-24 text-center md:text-left relative z-10">
           <header>
             <h2 className="[text-shadow:0px_0px_6.9px_#00000066] [font-family:'Poppins',Helvetica] font-medium text-[#cbd5e0] text-lg sm:text-xl md:text-[23px] tracking-[0] leading-[25.3px] mb-4 md:mb-6">
-              ABOGADOS DE INMIGRACIÓN EN KANSAS CITY
+              IMMIGRATION ATTORNEYS
             </h2>
 
             <h1 className="[text-shadow:0px_0px_18px_#00000066] [font-family:'Oswald',Helvetica] font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[0] leading-tight md:leading-[66px] mb-6 md:mb-12">
-              <span className="text-white">TE AYUDAMOS </span>
-              <span className="text-[#11b36f]">CON</span>
+              <span className="text-white">WE HELP YOU </span>
+              <span className="text-[#11b36f]">NAVIGATE</span>
               <span className="text-white">
-                {" "}EL PROCESO MIENTRAS TE GUIAMOS
+                {" "}THE IMMIGRATION PROCESS
                 <br className="hidden md:block" />
-                {" "}
+                {" "}WITH
               </span>
-              <span className="text-[#11b36f]">A TRAVÉS</span>
-              <span className="text-white"> DEL PROCESO</span>
+              <span className="text-[#11b36f]"> EXPERT</span>
+              <span className="text-white"> GUIDANCE</span>
             </h1>
           </header>
 
           <p className="[text-shadow:0px_0px_6.9px_#00000066] [font-family:'Poppins',Helvetica] font-light text-white text-lg sm:text-xl md:text-[23px] tracking-[0] leading-relaxed mb-8 md:mb-12 max-w-[843px] mx-auto md:mx-0">
-            ¿Estás confundido? ¿Frustrado? ¿Ansioso? ¡Los Abogados de Inmigración de KC pueden ayudarte!
+            Confused? Frustrated? Anxious? Constellation Law Immigration Attorneys can help you!
           </p>
 
           <Button 
@@ -74,7 +74,7 @@ export const HeroSection = (): JSX.Element => {
             className="w-full sm:w-auto min-w-[280px] sm:min-w-[324px] h-[50px] sm:h-[62px] bg-[#11b36f] rounded-[5px] border-2 border-solid hover:bg-[#0ea062] transition-colors px-4 cursor-pointer"
           >
             <span className="[font-family:'Oswald',Helvetica] font-medium text-white text-lg sm:text-xl md:text-[25px] tracking-[0] leading-tight">
-              RESERVA UNA CONSULTA
+              BOOK A CONSULTATION
             </span>
           </Button>
         </div>

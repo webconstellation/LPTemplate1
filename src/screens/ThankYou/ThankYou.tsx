@@ -2,24 +2,23 @@ import React from "react";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { CheckCircle, Phone, Mail, MapPin, ArrowLeft } from "lucide-react";
-                src="/dressie-law-logo.png"
-                alt="Dressie Law Firm"
+
+export const ThankYou = (): JSX.Element => {
   const handleBackToHome = () => {
     window.location.href = '/';
   };
 
   const handleCallNow = () => {
     window.location.href = 'tel:5551234567';
-              <span className="font-bold text-[#1a3770] text-lg md:text-xl">Dressie Law Firm</span>
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1a3770] via-[#2a4a8a] to-[#1a3770] relative overflow-hidden">
-            href="tel:6782807389"
       <div className="absolute inset-0">
         <img 
           src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
           alt="Immigration law office" 
-            <span>(678) 280-7389</span>
+        />
         />
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a3770]/80 via-[#2a4a8a]/80 to-[#1a3770]/80"></div>
       </div>

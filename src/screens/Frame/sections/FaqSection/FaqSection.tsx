@@ -77,10 +77,6 @@ export const FaqSection = (): JSX.Element => {
                 }
               }}
               className="bg-white text-[#11b36f] font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200"
-            >
-              SCHEDULE NOW
-            </button>
-          </div>
         </div>
 
         {/* Service descriptions */}

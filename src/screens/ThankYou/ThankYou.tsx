@@ -149,6 +149,5 @@ export const ThankYou = (): JSX.Element => {
           </p>
         </div>
       </footer>
-    </div>
   );
 };

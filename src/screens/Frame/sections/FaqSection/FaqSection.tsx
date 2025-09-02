@@ -26,6 +26,8 @@ export const FaqSection = (): JSX.Element => {
     }
   ];
 
+  const serviceDescriptions = [];
+
   return (
     <section className="w-full py-12 md:py-16 bg-gradient-to-br from-white via-gray-50 to-white">
       <div className="container mx-auto max-w-[1130px] px-4 sm:px-6 lg:px-8">
@@ -78,15 +80,6 @@ export const FaqSection = (): JSX.Element => {
             >
               SCHEDULE NOW
             </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
 

@@ -5,55 +5,55 @@ import { CheckCircle, Users, Globe, FileText, Shield, Clock } from "lucide-react
 export const FaqSection = (): JSX.Element => {
   // Service descriptions data
   const serviceDescriptions = [
-    "Our office provides answers to immigrants' questions and helps them with their immigration procedures, such as work permits or permanent residence applications.",
-    "With Constellation Law, you can have peace of mind receiving honest legal advice, defense, and representation in North Kansas City, throughout the Kansas City metropolitan area, anywhere in the United States, or around the world.",
-    "We have extensive experience in various immigration matters such as green card applications, work permits, family visas, marriage visas, fiancé visas, and more.",
-    "We also offer assistance with the U.S. citizenship and naturalization process. If you have questions about how to become a U.S. citizen or have a family member who needs help with their visa application, contact Constellation Law immediately for qualified legal representation.",
+    "Nuestra oficina brinda respuestas a las preguntas de los inmigrantes y los ayuda con sus trámites migratorios, como permisos de trabajo o solicitudes de residencia permanente.",
+    "Con KC Immigration Lawyers, puedes tener la tranquilidad de recibir asesoría legal honesta, defensa y representación en North Kansas City, en todo el área metropolitana de Kansas City, en cualquier parte de los Estados Unidos o del mundo.",
+    "Contamos con amplia experiencia en diversos temas migratorios como solicitudes de tarjeta verde, permisos de trabajo, visas familiares, visas por matrimonio, visas de prometido/a y más.",
+    "También ofrecemos asistencia con el proceso de ciudadanía y naturalización en los EE. UU. Si tienes preguntas sobre cómo convertirte en ciudadano estadounidense o tienes un familiar que necesita ayuda con su solicitud de visa, contacta a KC Immigration Lawyers de inmediato para obtener una representación legal calificada.",
   ];
 
   const clientCategories = [
     {
       icon: Users,
-      title: "U.S. Citizens",
-      description: "who wish to sponsor a spouse, child, parent, or sibling for a green card."
+      title: "Ciudadanos estadounidenses",
+      description: "que desean patrocinar a un cónyuge, hijo, padre o hermano para una tarjeta verde."
     },
     {
       icon: Globe,
-      title: "U.S. Citizens", 
-      description: "who wish to bring their fiancés to the U.S."
+      title: "Ciudadanos estadounidenses", 
+      description: "que desean traer a sus prometidos/as a los EE. UU."
     },
     {
       icon: FileText,
-      title: "Non-citizens",
-      description: "seeking to obtain visas."
+      title: "Personas no ciudadanas",
+      description: "que buscan obtener visas."
     },
     {
       icon: Shield,
-      title: "Individuals in the process",
-      description: "of obtaining permanent residence or U.S. citizenship."
+      title: "Personas en proceso",
+      description: "de obtener la residencia permanente o la ciudadanía estadounidense."
     }
   ];
 
   const serviceHighlights = [
     {
       icon: CheckCircle,
-      text: "Answers to immigrant questions"
+      text: "Respuestas a preguntas de inmigrantes"
     },
     {
       icon: CheckCircle, 
-      text: "Work permits"
+      text: "Permisos de trabajo"
     },
     {
       icon: CheckCircle,
-      text: "Permanent residence applications"
+      text: "Solicitudes de residencia permanente"
     },
     {
       icon: CheckCircle,
-      text: "Family and marriage visas"
+      text: "Visas familiares y de matrimonio"
     },
     {
       icon: CheckCircle,
-      text: "Citizenship and naturalization process"
+      text: "Proceso de ciudadanía y naturalización"
     }
   ];
 
@@ -62,11 +62,11 @@ export const FaqSection = (): JSX.Element => {
       <div className="container mx-auto max-w-[1130px] px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="font-bold text-[#1a3770] text-3xl sm:text-4xl md:text-[46px] leading-tight md:leading-[50.6px] [font-family:'Oswald',Helvetica] tracking-[0] mb-4">
-            WORKING WITH CONSTELLATION LAW
+            TRABAJAR CON KC IMMIGRATION LAWYERS
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-[#11b36f] to-[#0ea062] mx-auto mb-6"></div>
           <p className="[font-family:'Poppins',Helvetica] font-medium text-[#1a3770] text-base md:text-lg max-w-3xl mx-auto">
-            Our firm offers a wide range of immigration-related legal services for different categories of clients, including:
+            Nuestra firma ofrece una amplia gama de servicios legales relacionados con inmigración para diferentes categorías de clientes, incluyendo:
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export const FaqSection = (): JSX.Element => {
 
             {/* Service highlights */}
             <div className="bg-gradient-to-br from-[#1a3770] to-[#2a4a8a] rounded-2xl p-6 text-white">
-              <h3 className="font-bold text-xl mb-4">Our Services Include:</h3>
+              <h3 className="font-bold text-xl mb-4">Nuestros Servicios Incluyen:</h3>
               <div className="grid grid-cols-1 gap-3">
                 {serviceHighlights.map((highlight, index) => (
                   <div key={index} className="flex items-center gap-3">
@@ -117,8 +117,8 @@ export const FaqSection = (): JSX.Element => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a3770]/40 via-transparent to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                      <p className="text-[#1a3770] font-semibold">Professional Consultation</p>
-                      <p className="text-gray-600 text-sm">Specialized legal advice</p>
+                      <p className="text-[#1a3770] font-semibold">Consulta Profesional</p>
+                      <p className="text-gray-600 text-sm">Asesoría legal especializada</p>
                     </div>
                   </div>
                 </div>

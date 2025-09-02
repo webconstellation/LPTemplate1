@@ -6,14 +6,14 @@ import { Phone, Mail, MapPin, Send } from "lucide-react";
 export const FooterSection = (): JSX.Element => {
   const contactInfo = [
     {
-      title: "Free Consultation",
-      details: "(555) 123-4567",
+      title: "Consulta Gratuita",
+      details: "(816) 207-4496",
       titleClass: "w-[217px]",
       detailsClass: "w-[155px]",
     },
     {
-      title: "Main Office",
-      details: "123 Main Street\nAnytown, State 12345",
+      title: "Oficina Principal",
+      details: "1901 Swift Avenue North\nKansas City, Missouri 64116",
       titleClass: "w-[138px]",
       detailsClass: "w-[271px]",
     },
@@ -28,11 +28,11 @@ export const FooterSection = (): JSX.Element => {
           {/* Header section integrated into main content */}
           <div className="text-center mb-12 md:mb-16">
             <h2 className="font-['Oswald',Helvetica] font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center tracking-[0] leading-tight md:leading-[66px] mb-4">
-              CONTACT US NOW
+              CONTÁCTANOS AHORA
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#11b36f] to-[#0ea062] mx-auto mb-6"></div>
             <p className="text-white/80 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-              Ready to start your immigration process? Contact us for expert and personalized legal advice.
+              ¿Listo para comenzar tu proceso migratorio? Contáctanos para obtener asesoría legal experta y personalizada.
             </p>
           </div>
 
@@ -41,7 +41,7 @@ export const FooterSection = (): JSX.Element => {
             <Card id="contact-form" className="bg-white/10 backdrop-blur-sm border-white/20 rounded-2xl overflow-hidden">
               <CardContent className="p-6 md:p-8">
                 <h3 className="font-['Oswald',Helvetica] font-bold text-white text-2xl md:text-3xl mb-6 text-center">
-                  Request Your Free Consultation
+                  Solicita Tu Consulta Gratuita
                 </h3>
                 <form 
                   name="contact" 
@@ -63,7 +63,7 @@ export const FooterSection = (): JSX.Element => {
                   
                   <div>
                     <label htmlFor="fullName" className="block text-white/90 text-sm font-medium mb-2">
-                      Full Name *
+                      Nombre Completo *
                     </label>
                     <input
                       type="text"
@@ -71,12 +71,12 @@ export const FooterSection = (): JSX.Element => {
                       name="fullName"
                       required
                       className="w-full px-4 py-3 bg-white/90 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#11b36f] focus:border-transparent outline-none transition-all duration-200"
-                      placeholder="Your full name"
+                      placeholder="Tu nombre completo"
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-white/90 text-sm font-medium mb-2">
-                      Email Address *
+                      Correo Electrónico *
                     </label>
                     <input
                       type="email"
@@ -84,12 +84,12 @@ export const FooterSection = (): JSX.Element => {
                       name="email"
                       required
                       className="w-full px-4 py-3 bg-white/90 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#11b36f] focus:border-transparent outline-none transition-all duration-200"
-                      placeholder="your@email.com"
+                      placeholder="tu@email.com"
                     />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-white/90 text-sm font-medium mb-2">
-                      Phone *
+                      Teléfono *
                     </label>
                     <input
                       type="tel"
@@ -97,12 +97,12 @@ export const FooterSection = (): JSX.Element => {
                       name="phone"
                       required
                       className="w-full px-4 py-3 bg-white/90 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#11b36f] focus:border-transparent outline-none transition-all duration-200"
-                      placeholder="(555) 000-0000"
+                      placeholder="(816) 000-0000"
                     />
                   </div>
                   <div>
                     <label htmlFor="caseSummary" className="block text-white/90 text-sm font-medium mb-2">
-                      Brief Summary of Your Case *
+                      Resumen Breve de Tu Caso *
                     </label>
                     <textarea
                       id="caseSummary"
@@ -110,7 +110,7 @@ export const FooterSection = (): JSX.Element => {
                       required
                       rows={4}
                       className="w-full px-4 py-3 bg-white/90 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#11b36f] focus:border-transparent outline-none transition-all duration-200 resize-vertical"
-                      placeholder="Briefly describe your immigration situation and how we can help you..."
+                      placeholder="Describe brevemente tu situación migratoria y cómo podemos ayudarte..."
                     ></textarea>
                   </div>
                   <Button 
@@ -118,7 +118,7 @@ export const FooterSection = (): JSX.Element => {
                     className="w-full bg-gradient-to-r from-[#11b36f] to-[#0ea062] hover:from-[#0ea062] hover:to-[#11b36f] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <Send className="w-5 h-5 mr-2" />
-                    Send Request
+                    Enviar Solicitud
                   </Button>
                 </form>
               </CardContent>
@@ -128,10 +128,10 @@ export const FooterSection = (): JSX.Element => {
             <div className="space-y-6">
               <div className="text-center lg:text-left mb-8">
                 <h3 className="font-['Oswald',Helvetica] font-bold text-white text-2xl md:text-3xl mb-4">
-                  Contact Information
+                  Información de Contacto
                 </h3>
                 <p className="text-white/80 text-lg">
-                  We're here to help you with your immigration process
+                  Estamos aquí para ayudarte con tu proceso migratorio
                 </p>
               </div>
 
@@ -155,11 +155,11 @@ export const FooterSection = (): JSX.Element => {
                         </p>
                         {index === 0 && (
                           <a
-                            href="tel:5551234567"
+                            href="tel:8162074496"
                             className="inline-flex items-center mt-3 text-[#11b36f] hover:text-[#0ea062] transition-colors duration-200"
                           >
                             <Phone className="w-4 h-4 mr-2" />
-                            Call Now
+                            Llamar Ahora
                           </a>
                         )}
                       </div>
@@ -172,9 +172,9 @@ export const FooterSection = (): JSX.Element => {
               <Card className="bg-gradient-to-r from-[#1a3770] to-[#2a4a8a] border-none rounded-xl overflow-hidden">
                 <CardContent className="p-6 text-center">
                   <Mail className="w-8 h-8 text-[#11b36f] mx-auto mb-3" />
-                  <h4 className="font-semibold text-white text-lg mb-2">Prefer to write?</h4>
+                  <h4 className="font-semibold text-white text-lg mb-2">¿Prefieres escribir?</h4>
                   <p className="text-white/80 text-sm">
-                    You can also send us an email and we'll respond soon
+                    También puedes enviarnos un email y te responderemos pronto
                   </p>
                 </CardContent>
               </Card>
@@ -185,7 +185,7 @@ export const FooterSection = (): JSX.Element => {
         {/* Copyright */}
         <div className="border-t border-white/10 py-4 text-center">
           <p className="text-white/60 text-sm">
-            © 2025 Constellation Law. All rights reserved. | Professional Legal Services
+            © 2025 KC Immigration Lawyers. Todos los derechos reservados. | Servicios Legales Profesionales
           </p>
         </div>
       </div>

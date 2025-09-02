@@ -3,10 +3,10 @@ import { Card, CardContent } from "../../../../components/ui/card";
 
 export const AboutUsSection = (): JSX.Element => {
   const paragraphs = [
-    "At Constellation Law, we offer a variety of services focused on assisting our clients with U.S. immigration law. Primarily, we help people obtain their green cards (permanent residence), U.S. citizenship, or come to the United States through visas such as the K-1 fiancé visa. U.S. visas are necessary for anyone wishing to enter the country.",
-    "From gathering information and documents to completing forms and preparing you for your interview, working with us can make the process easier.",
-    "No matter what type of visa or method you choose to come to the U.S., the immigration process involves several steps before obtaining citizenship or even being approved for a visa. It can be complicated and anxiety-inducing.",
-    "We are committed to ensuring you understand the process and know what to expect. We are with you every step of the way to answer your questions, set expectations, and help you chart the best path forward.",
+    "En KC Immigration Lawyers, ofrecemos una variedad de servicios enfocados en asistir a nuestros clientes con la ley de inmigración de los EE. UU. Principalmente, ayudamos a las personas a obtener sus tarjetas verdes (residencia permanente), ciudadanía estadounidense o venir a los Estados Unidos mediante visas como la visa de prometido/a K-1. Las visas estadounidenses son necesarias para cualquier persona que desee ingresar al país.",
+    "Desde recopilar información y documentos hasta completar formularios y prepararte para tu entrevista, trabajar con nosotros puede hacer que el proceso sea más fácil.",
+    "No importa qué tipo de visa o método elijas para venir a EE. UU., el proceso migratorio implica varios pasos antes de obtener la ciudadanía o incluso ser aprobado para una visa. Puede ser complicado y generar ansiedad.",
+    "Nos comprometemos a asegurarnos de que comprendas el proceso y sepas qué esperar. Estamos contigo en cada paso del camino para responder tus preguntas, establecer expectativas y ayudarte a trazar el mejor camino hacia adelante.",
   ];
 
   return (
@@ -23,9 +23,9 @@ export const AboutUsSection = (): JSX.Element => {
 
       <div className="max-w-[1130px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center leading-tight md:leading-[66px] [font-family:'Oswald',Helvetica] tracking-[0] mb-6 md:mb-8">
-          PROFESSIONAL AND PERSONALIZED HELP FOR
+          AYUDA PROFESIONAL Y CERCANA PARA
           <br className="hidden md:block" />
-          YOUR IMMIGRATION AND CITIZENSHIP CASE
+          TU CASO DE INMIGRACIÓN Y CIUDADANÍA
         </h2>
 
         <div className="space-y-4 md:space-y-8">

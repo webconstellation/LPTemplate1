@@ -9,7 +9,7 @@ export const ThankYou = (): JSX.Element => {
   };
 
   const handleCallNow = () => {
-    window.location.href = 'tel:5551234567';
+    window.location.href = 'tel:8162074496';
   };
 
   return (
@@ -31,24 +31,24 @@ export const ThankYou = (): JSX.Element => {
             <div className="flex-shrink-0">
               <div className="h-7 md:h-10 flex items-center">
                 <img
-                  src="/constellation-law-logo.png"
-                  alt="Constellation Law"
+                  src="/KC-Immigration-Lawyers-Logo.png"
+                  alt="KC Immigration Lawyers"
                   className="h-full w-auto"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.nextElementSibling.style.display = 'block';
                   }}
                 />
-                <span className="hidden font-bold text-[#1a3770] text-lg md:text-xl">Constellation Law</span>
+                <span className="hidden font-bold text-[#1a3770] text-lg md:text-xl">KC Immigration</span>
               </div>
             </div>
             <a
-              href="tel:5551234567"
+              href="tel:8162074496"
               className="inline-flex items-center px-4 py-2 md:px-6 md:py-3 bg-[#22c55e] hover:bg-[#16a34a] text-white font-semibold rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
             >
               <Phone className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              <span className="hidden sm:inline">Call: </span>
-              <span>(555) 123-4567</span>
+              <span className="hidden sm:inline">Llamar: </span>
+              <span>(816) 207-4496</span>
             </a>
           </div>
         </div>
@@ -67,12 +67,12 @@ export const ThankYou = (): JSX.Element => {
 
             {/* Main Heading */}
             <h1 className="font-['Oswald',Helvetica] font-bold text-white text-4xl sm:text-5xl md:text-6xl leading-tight mb-6">
-              THANK YOU FOR CONTACTING US!
+              ¡GRACIAS POR CONTACTARNOS!
             </h1>
 
             {/* Subheading */}
             <p className="font-['Poppins',Helvetica] font-light text-white/90 text-xl md:text-2xl leading-relaxed mb-8 max-w-3xl mx-auto">
-              We have received your consultation request and will contact you soon.
+              Hemos recibido tu solicitud de consulta y nos pondremos en contacto contigo pronto.
             </p>
           </div>
 
@@ -82,20 +82,20 @@ export const ThankYou = (): JSX.Element => {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-2xl overflow-hidden">
               <CardContent className="p-8 text-center">
                 <h2 className="font-['Oswald',Helvetica] font-bold text-white text-2xl mb-4">
-                  Next Steps
+                  Próximos Pasos
                 </h2>
                 <div className="space-y-3 text-white/90">
                   <p className="flex items-center justify-center gap-2">
                     <span className="w-2 h-2 bg-[#11b36f] rounded-full"></span>
-                    We will review your case in detail
+                    Revisaremos tu caso en detalle
                   </p>
                   <p className="flex items-center justify-center gap-2">
                     <span className="w-2 h-2 bg-[#11b36f] rounded-full"></span>
-                    We will contact you within 24 hours
+                    Te contactaremos dentro de 24 horas
                   </p>
                   <p className="flex items-center justify-center gap-2">
                     <span className="w-2 h-2 bg-[#11b36f] rounded-full"></span>
-                    We will schedule your free consultation
+                    Programaremos tu consulta gratuita
                   </p>
                 </div>
               </CardContent>
@@ -105,16 +105,16 @@ export const ThankYou = (): JSX.Element => {
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 rounded-2xl overflow-hidden">
               <CardContent className="p-8 text-center">
                 <h2 className="font-['Oswald',Helvetica] font-bold text-white text-2xl mb-4">
-                  Need Immediate Help?
+                  ¿Necesitas Ayuda Inmediata?
                 </h2>
                 <div className="space-y-4">
                   <div className="flex items-center justify-center gap-3 text-white/90">
                     <Phone className="w-5 h-5 text-[#11b36f]" />
-                    <span>(555) 123-4567</span>
+                    <span>(816) 207-4496</span>
                   </div>
                   <div className="flex items-center justify-center gap-3 text-white/90">
                     <MapPin className="w-5 h-5 text-[#11b36f]" />
-                    <span className="text-sm">123 Main Street<br />Anytown, State 12345</span>
+                    <span className="text-sm">1901 Swift Avenue North<br />Kansas City, Missouri 64116</span>
                   </div>
                 </div>
               </CardContent>
@@ -128,7 +128,7 @@ export const ThankYou = (): JSX.Element => {
               className="w-full sm:w-auto min-w-[280px] h-[50px] bg-gradient-to-r from-[#11b36f] to-[#0ea062] hover:from-[#0ea062] hover:to-[#11b36f] rounded-xl border-none font-['Oswald',Helvetica] font-medium text-white text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               <Phone className="w-5 h-5 mr-2" />
-              CALL NOW
+              LLAMAR AHORA
             </Button>
             
             <Button 
@@ -137,7 +137,7 @@ export const ThankYou = (): JSX.Element => {
               className="w-full sm:w-auto min-w-[280px] h-[50px] bg-white/10 backdrop-blur-sm border-white/30 hover:bg-white/20 rounded-xl font-['Oswald',Helvetica] font-medium text-white text-lg transition-all duration-300"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
-              BACK TO HOME
+              VOLVER AL INICIO
             </Button>
           </div>
         </div>
@@ -147,7 +147,7 @@ export const ThankYou = (): JSX.Element => {
       <footer className="relative z-10 border-t border-white/10 py-6">
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-white/60 text-sm">
-            © 2025 Constellation Law. All rights reserved. | Professional Legal Services
+            © 2025 KC Immigration Lawyers. Todos los derechos reservados. | Servicios Legales Profesionales
           </p>
         </div>
       </footer>

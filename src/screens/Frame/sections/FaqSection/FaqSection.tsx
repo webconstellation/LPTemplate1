@@ -80,9 +80,6 @@ export const FaqSection = (): JSX.Element => {
             >
               Get Free Consultation
             </button>
-            >
-              Get Free Consultation
-            </button>
           </div>
         </div>
 

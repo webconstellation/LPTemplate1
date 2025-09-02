@@ -18,7 +18,6 @@ export const ThankYou = (): JSX.Element => {
         <img 
           src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
           alt="Immigration law office" 
-        />
         <div className="absolute inset-0 bg-gradient-to-br from-[#1a3770]/80 via-[#2a4a8a]/80 to-[#1a3770]/80"></div>
       </div>
 

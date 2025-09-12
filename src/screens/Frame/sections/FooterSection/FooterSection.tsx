@@ -35,11 +35,6 @@ export const FooterSection = (): JSX.Element => {
       formData.append(key, value);
     });
     
-    // WhatConverts tracking
-    if (typeof window !== 'undefined' && (window as any).wc_lead) {
-      (window as any).wc_lead();
-    }
-    
     // Submit to Basin (endpoint to be added later)
     // For now, redirect to thank you page
     window.location.href = '/thank-you';

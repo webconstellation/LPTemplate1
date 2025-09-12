@@ -2,7 +2,7 @@ import React from "react";
 import { AboutUsSection } from "./sections/AboutUsSection";
 import { ConsultationSection } from "./sections/ConsultationSection";
 import { ContactSection } from "./sections/ContactSection";
-import { FaqSection } from "./sections/FaqSection";
+import { WhyUsSection } from "./sections/WhyUsSection";
 import { FooterSection } from "./sections/FooterSection";
 import { HeaderSection } from "./sections/HeaderSection";
 import { HeroSection } from "./sections/HeroSection";
@@ -18,7 +18,7 @@ export const Frame = (): JSX.Element => {
       <CallToActionSection />
       <AboutUsSection />
       <ConsultationSection />
-      <FaqSection />
+      <WhyUsSection />
       <ContactSection />
       <FooterSection />
     </div>

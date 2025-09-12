@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../../../../components/ui/button";
 
-export const ServicesSection = (): JSX.Element => {
+export const CallToActionSection = (): JSX.Element => {
   const scrollToContactForm = () => {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {

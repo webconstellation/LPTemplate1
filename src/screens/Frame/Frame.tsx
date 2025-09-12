@@ -7,7 +7,7 @@ import { FooterSection } from "./sections/FooterSection";
 import { HeaderSection } from "./sections/HeaderSection";
 import { HeroSection } from "./sections/HeroSection";
 import { PracticeAreasSection } from "./sections/PracticeAreasSection";
-import { ServicesSection } from "./sections/ServicesSection";
+import { CallToActionSection } from "./sections/CallToActionSection";
 
 export const Frame = (): JSX.Element => {
   return (
@@ -15,7 +15,7 @@ export const Frame = (): JSX.Element => {
       <HeaderSection />
       <HeroSection />
       <PracticeAreasSection />
-      <ServicesSection />
+      <CallToActionSection />
       <AboutUsSection />
       <ConsultationSection />
       <FaqSection />

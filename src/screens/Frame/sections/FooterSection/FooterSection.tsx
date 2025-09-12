@@ -4,6 +4,47 @@ import { Card, CardContent } from "../../../../components/ui/card";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 
 export const FooterSection = (): JSX.Element => {
+  // Function to get URL parameters and other tracking info
+  const getTrackingInfo = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const referrer = document.referrer;
+    const userAgent = navigator.userAgent;
+    const timestamp = new Date().toISOString();
+    
+    return {
+      source: urlParams.get('utm_source') || urlParams.get('source') || 'direct',
+      medium: urlParams.get('utm_medium') || urlParams.get('medium') || 'organic',
+      campaign: urlParams.get('utm_campaign') || urlParams.get('campaign') || '',
+      term: urlParams.get('utm_term') || urlParams.get('term') || '',
+      content: urlParams.get('utm_content') || urlParams.get('content') || '',
+      referrer: referrer || 'direct',
+      userAgent: userAgent,
+      timestamp: timestamp,
+      page: window.location.href
+    };
+  };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // Add tracking information to form data
+    const trackingInfo = getTrackingInfo();
+    Object.entries(trackingInfo).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+    
+    // WhatConverts tracking
+    if (typeof window !== 'undefined' && (window as any).wc_lead) {
+      (window as any).wc_lead();
+    }
+    
+    // Submit to Basin (endpoint to be added later)
+    // For now, redirect to thank you page
+    window.location.href = '/thank-you';
+  };
+
   const contactInfo = [
     {
       title: "Free Consultation",
@@ -44,19 +85,13 @@ export const FooterSection = (): JSX.Element => {
                   Request Your Free Consultation
                 </h3>
                 <form 
-                  action="https://formspree.io/f/YOUR_FORM_ID"
+                  onSubmit={handleFormSubmit}
                   method="POST"
-                  onSubmit={() => {
-                    // WhatConverts tracking
-                    if (typeof window !== 'undefined' && window.wc_lead) {
-                      window.wc_lead();
-                    }
-                  }}
                   className="space-y-4"
                 >
-                  {/* Hidden field for form identification */}
-                  <input type="hidden" name="_subject" value="New Immigration Consultation Request" />
-                  <input type="hidden" name="_next" value={`${window.location.origin}/thank-you`} />
+                  {/* Hidden fields for tracking */}
+                  <input type="hidden" name="form_type" value="consultation_request" />
+                  <input type="hidden" name="form_source" value="footer_contact_form" />
                   
                   <div>
                     <label htmlFor="fullName" className="block text-white/90 text-sm font-medium mb-2">

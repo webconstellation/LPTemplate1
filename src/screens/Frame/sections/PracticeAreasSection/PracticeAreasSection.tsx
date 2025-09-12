@@ -2,7 +2,7 @@ import React from "react";
 import { Users, FileCheck, Heart, Home } from "lucide-react";
 import { Card, CardContent } from "../../../../components/ui/card";
 
-export const IntroductionSection = (): JSX.Element => {
+export const PracticeAreasSection = (): JSX.Element => {
   // Service card data for mapping
   const serviceCards = [
     {

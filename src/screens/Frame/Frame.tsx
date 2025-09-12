@@ -6,7 +6,7 @@ import { FaqSection } from "./sections/FaqSection";
 import { FooterSection } from "./sections/FooterSection";
 import { HeaderSection } from "./sections/HeaderSection";
 import { HeroSection } from "./sections/HeroSection";
-import { IntroductionSection } from "./sections/IntroductionSection/IntroductionSection";
+import { PracticeAreasSection } from "./sections/PracticeAreasSection";
 import { ServicesSection } from "./sections/ServicesSection";
 
 export const Frame = (): JSX.Element => {
@@ -14,7 +14,7 @@ export const Frame = (): JSX.Element => {
     <div className="flex flex-col w-full bg-white">
       <HeaderSection />
       <HeroSection />
-      <IntroductionSection />
+      <PracticeAreasSection />
       <ServicesSection />
       <AboutUsSection />
       <ConsultationSection />

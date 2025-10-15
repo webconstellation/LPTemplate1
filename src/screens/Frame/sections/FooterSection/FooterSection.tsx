@@ -1,43 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
+import { getFormTrackingData } from "../../../../lib/tracking";
+import { submitLead } from "../../../../lib/supabase";
 
 export const FooterSection = (): JSX.Element => {
-  // Function to get URL parameters and other tracking info
-  const getTrackingInfo = () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const referrer = document.referrer;
-    const userAgent = navigator.userAgent;
-    const timestamp = new Date().toISOString();
-    
-    return {
-      source: urlParams.get('utm_source') || urlParams.get('source') || 'direct',
-      medium: urlParams.get('utm_medium') || urlParams.get('medium') || 'organic',
-      campaign: urlParams.get('utm_campaign') || urlParams.get('campaign') || '',
-      term: urlParams.get('utm_term') || urlParams.get('term') || '',
-      content: urlParams.get('utm_content') || urlParams.get('content') || '',
-      referrer: referrer || 'direct',
-      userAgent: userAgent,
-      timestamp: timestamp,
-      page: window.location.href
-    };
-  };
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    
-    // Add tracking information to form data
-    const trackingInfo = getTrackingInfo();
-    Object.entries(trackingInfo).forEach(([key, value]) => {
-      formData.append(key, value);
-    });
-    
-    // Submit to Basin (endpoint to be added later)
-    // For now, redirect to thank you page
-    window.location.href = '/thank-you';
+
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+
+      const trackingData = getFormTrackingData();
+
+      const leadData = {
+        full_name: formData.get('fullName') as string,
+        email: formData.get('email') as string,
+        phone: formData.get('phone') as string,
+        case_summary: formData.get('caseSummary') as string,
+        form_type: formData.get('form_type') as string || 'consultation_request',
+        form_source: formData.get('form_source') as string || 'footer_contact_form',
+        ...trackingData,
+      };
+
+      await submitLead(leadData);
+
+      window.location.href = '/thank-you';
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your request. Please try again or call us directly.');
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -140,12 +141,13 @@ export const FooterSection = (): JSX.Element => {
                       placeholder="Briefly describe your immigration situation and how we can help you..."
                     ></textarea>
                   </div>
-                  <Button 
+                  <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-[#11b36f] to-[#0ea062] hover:from-[#0ea062] hover:to-[#11b36f] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-[#11b36f] to-[#0ea062] hover:from-[#0ea062] hover:to-[#11b36f] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     <Send className="w-5 h-5 mr-2" />
-                    Send Request
+                    {isSubmitting ? 'Sending...' : 'Send Request'}
                   </Button>
                 </form>
               </CardContent>

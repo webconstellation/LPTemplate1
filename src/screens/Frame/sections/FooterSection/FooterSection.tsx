@@ -1,45 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { getFormTrackingData } from "../../../../lib/tracking";
-import { submitLead } from "../../../../lib/supabase";
 
 export const FooterSection = (): JSX.Element => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [trackingData, setTrackingData] = useState<any>(null);
 
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (isSubmitting) return;
-
-    setIsSubmitting(true);
-
-    try {
-      const form = e.currentTarget;
-      const formData = new FormData(form);
-
-      const trackingData = getFormTrackingData();
-
-      const leadData = {
-        full_name: formData.get('fullName') as string,
-        email: formData.get('email') as string,
-        phone: formData.get('phone') as string,
-        case_summary: formData.get('caseSummary') as string,
-        form_type: formData.get('form_type') as string || 'consultation_request',
-        form_source: formData.get('form_source') as string || 'footer_contact_form',
-        ...trackingData,
-      };
-
-      await submitLead(leadData);
-
-      window.location.href = '/thank-you';
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting your request. Please try again or call us directly.');
-      setIsSubmitting(false);
-    }
-  };
+  useEffect(() => {
+    const data = getFormTrackingData();
+    setTrackingData(data);
+  }, []);
 
   const contactInfo = [
     {
@@ -80,14 +51,35 @@ export const FooterSection = (): JSX.Element => {
                 <h3 className="font-['Oswald',Helvetica] font-bold text-white text-2xl md:text-3xl mb-6 text-center">
                   Request Your Free Consultation
                 </h3>
-                <form 
-                  onSubmit={handleFormSubmit}
+                <form
+                  action="https://usebasin.com/f/YOUR_BASIN_FORM_ID"
                   method="POST"
                   className="space-y-4"
                 >
-                  {/* Hidden fields for tracking */}
+                  {/* Basin redirect configuration */}
+                  <input type="hidden" name="_redirect" value={`${window.location.origin}/thank-you`} />
+
+                  {/* Hidden fields for form identification */}
                   <input type="hidden" name="form_type" value="consultation_request" />
                   <input type="hidden" name="form_source" value="footer_contact_form" />
+
+                  {/* Hidden fields for tracking data */}
+                  {trackingData && (
+                    <>
+                      <input type="hidden" name="source" value={trackingData.source} />
+                      <input type="hidden" name="medium" value={trackingData.medium} />
+                      <input type="hidden" name="campaign" value={trackingData.campaign} />
+                      <input type="hidden" name="term" value={trackingData.term} />
+                      <input type="hidden" name="content" value={trackingData.content} />
+                      <input type="hidden" name="referrer" value={trackingData.referrer} />
+                      <input type="hidden" name="landing_page" value={trackingData.landing_page} />
+                      <input type="hidden" name="submission_page" value={trackingData.submission_page} />
+                      <input type="hidden" name="user_agent" value={trackingData.user_agent} />
+                      <input type="hidden" name="session_id" value={trackingData.session_id} />
+                      <input type="hidden" name="first_touch_timestamp" value={trackingData.first_touch_timestamp} />
+                      <input type="hidden" name="submission_timestamp" value={trackingData.submission_timestamp} />
+                    </>
+                  )}
                   
                   <div>
                     <label htmlFor="fullName" className="block text-white/90 text-sm font-medium mb-2">
@@ -143,11 +135,10 @@ export const FooterSection = (): JSX.Element => {
                   </div>
                   <Button
                     type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-[#11b36f] to-[#0ea062] hover:from-[#0ea062] hover:to-[#11b36f] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full bg-gradient-to-r from-[#11b36f] to-[#0ea062] hover:from-[#0ea062] hover:to-[#11b36f] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <Send className="w-5 h-5 mr-2" />
-                    {isSubmitting ? 'Sending...' : 'Send Request'}
+                    Send Request
                   </Button>
                 </form>
               </CardContent>
